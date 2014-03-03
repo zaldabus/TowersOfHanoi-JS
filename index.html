@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="underscore.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="hanoi.js"></script>
+</head>
+
+<body>
+  <h1>Towers of Hanoi</h1>
+  <div class="group">
+    <ul id="0" class="group">
+      <li id="1" class="smalldisc"></li>
+      <li id="2" class="mediumdisc"></li>
+      <li id="3" class="largedisc"></li>
+    </ul>
+
+    <ul id="1" class="group">
+      <li id="4" class="invisible"></li>
+      <li id="5" class="invisible"></li>
+      <li id="6" class="invisible"></li>
+    </ul>
+
+    <ul id="2" class="group">
+      <li id="7" class="invisible"></li>
+      <li id="8" class="invisible"></li>
+      <li id="9" class="invisible"></li>
+    </ul>
+  </div>
+</body>
+
+<style>
+
+body, ul, li {
+  margin: 5;
+  padding: 0;
+  border: 0;
+}
+h1 {
+  text-align: center;
+}
+
+div{
+  margin: 0 auto;
+  width: 408px;
+}
+  ul {
+    list-style: none;
+    width: 110px;
+    float: left;
+    border: 3px solid black;
+    padding: 10px;
+  }
+
+  li {
+    width: 90px;
+    height: 20px;
+    background: transparent;
+    cursor: pointer;
+    font-size: 50px;
+    padding: 10px;
+    margin: 5px auto;
+    border: 2px dotted white;
+    margin: 0 auto;
+  }
+
+  ul:hover {
+    background: gray;
+  }
+
+  .group:after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+
+  #selected {
+    background: red;
+  }
+
+  li.smalldisc {
+    width: 50px;
+    height: 20px;
+    background: green;
+    border: 2px solid gray;
+  }
+
+  li.mediumdisc {
+    width: 70px;
+    height: 20px;
+    background: blue;
+    border: 2px solid gray;
+  }
+
+  li.largedisc {
+    width: 90px;
+    height: 20px;
+    background: pink;
+    border: 2px solid gray;
+  }
+
+</style>
+</html>
